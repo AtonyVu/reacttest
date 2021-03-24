@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import reactDom from "react-dom";
 
 
 
@@ -9,7 +8,6 @@ class Modal extends Component {
   {
     
     super(props);
-    this.local = {...this.props.sendEditdata};;
     this.data1='';
     this.state={
           id:'',
@@ -23,8 +21,6 @@ class Modal extends Component {
     this.Close = React.createRef();
     
   }
-
-
    async UNSAFE_componentWillReceiveProps(nextProps)
   {
      const{sendEditdata,checkHeader}=  nextProps;
@@ -35,15 +31,10 @@ class Modal extends Component {
   }
   else
   {
-    await  this.setState({id:'',name:"",username:"",email:"",type:'',phoneNumber:''
+    await  this.setState({id:'',name:"",username:"",email:"",type:'User',phoneNumber:''
     });
   }
-  console.log("next",nextProps);
   }
-  renderState =()=>{
-    
-  }
- 
  submit = async()=>{
 
    let state={
@@ -53,8 +44,6 @@ class Modal extends Component {
     email:this.state.email,
     phoneNumber:this.state.phoneNumber,
     type:this.state.type,
-
-  
 }
   await this.props.recidata(state);
 
