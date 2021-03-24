@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import HandlingEvent from './Handling-event';
+// import BaiTap1 from './BaiTap1/index'
+// import BaiTap2 from './BaiTap2/index'
+// import RenderingElement from './rendering-element';
+import Example from './Listkey/Example'
+import Index from './User/index'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <Index/>
     </div>
-  );
+  )
 }
 
 export default App;
